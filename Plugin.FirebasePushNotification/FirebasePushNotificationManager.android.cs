@@ -422,15 +422,6 @@ namespace Plugin.FirebasePushNotification
         }
 
 
-        public void SendDeviceGroupMessage(IDictionary<string, string> parameters, string groupKey, string messageId, int timeOfLive)
-        {
-            var message = new RemoteMessage.Builder(groupKey);
-            message.SetData(parameters);
-            message.SetMessageId(messageId);
-            message.SetTtl(timeOfLive);
-            FirebaseMessaging.Instance.Send(message.Build());
-        }
-
         public NotificationUserCategory[] GetUserNotificationCategories()
         {
             return userNotificationCategories?.ToArray();

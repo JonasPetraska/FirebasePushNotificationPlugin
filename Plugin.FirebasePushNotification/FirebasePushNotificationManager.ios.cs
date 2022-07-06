@@ -361,14 +361,14 @@ namespace Plugin.FirebasePushNotification
             _onNotificationError?.Invoke(CrossFirebasePushNotification.Current, new FirebasePushNotificationErrorEventArgs(FirebasePushNotificationErrorType.RegistrationFailed, error.Description));
         }
 
-        public void ApplicationReceivedRemoteMessage(RemoteMessage remoteMessage)
-        {
-            System.Console.WriteLine(remoteMessage.AppData);
-            System.Diagnostics.Debug.WriteLine("ApplicationReceivedRemoteMessage");
-            var parameters = GetParameters(remoteMessage.AppData);
-            _onNotificationReceived?.Invoke(CrossFirebasePushNotification.Current, new FirebasePushNotificationDataEventArgs(parameters));
-            CrossFirebasePushNotification.Current.NotificationHandler?.OnReceived(parameters);
-        }
+        //public void ApplicationReceivedRemoteMessage(RemoteMessage remoteMessage)
+        //{
+        //    System.Console.WriteLine(remoteMessage.AppData);
+        //    System.Diagnostics.Debug.WriteLine("ApplicationReceivedRemoteMessage");
+        //    var parameters = GetParameters(remoteMessage.AppData);
+        //    _onNotificationReceived?.Invoke(CrossFirebasePushNotification.Current, new FirebasePushNotificationDataEventArgs(parameters));
+        //    CrossFirebasePushNotification.Current.NotificationHandler?.OnReceived(parameters);
+        //}
 
         private static IDictionary<string, object> GetParameters(NSDictionary data)
         {
@@ -481,23 +481,6 @@ namespace Plugin.FirebasePushNotification
             NSUserDefaults.StandardUserDefaults.SetValueForKey(currentTopics, FirebaseTopicsKey);
             NSUserDefaults.StandardUserDefaults.Synchronize();
 
-        }
-
-        public void SendDeviceGroupMessage(IDictionary<string, string> parameters, string groupKey, string messageId, int timeOfLive)
-        {
-            if (hasToken)
-            {
-                using (var message = new NSMutableDictionary())
-                {
-                    foreach (var p in parameters)
-                    {
-                        message.Add(new NSString(p.Key), new NSString(p.Value));
-                    }
-
-                    Messaging.SharedInstance.SendMessage(message, groupKey, messageId, timeOfLive);
-                }
-                  
-            }
         }
 
         [Export("userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:")]
