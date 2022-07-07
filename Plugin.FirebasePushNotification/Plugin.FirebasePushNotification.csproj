@@ -11,13 +11,14 @@
     <RootNamespace>Plugin.FirebasePushNotification</RootNamespace>
     <Title>Firebase Push Notification Plugin for Xamarin iOS and Android</Title>
     <Summary>Receive and handle firebase push notifications across Xamarin.iOS and Xamarin.Android</Summary>
-    <Description>Receive and handle firebase push notifications across Xamarin.iOS and Xamarin.Android</Description>
+    <Description>Receive and handle firebase push notifications across Xamarin.iOS and Xamarin.Android.
+Fork of original library with removes "SendMessage" references and updated libraries.</Description>
 
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 
-    <Version>1.0.0</Version>
+    <Version>2.0.0</Version>
 
   </PropertyGroup>
 
@@ -120,10 +121,6 @@
     <None Remove="Platforms\Xamarin\**\*.cs" />
     <Compile Include="Platforms\Tizen\**\*.cs" />
     <Compile Include="Platforms\Xamarin\**\*.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Firebase.iOS.CloudMessaging" Version="8.10.0.1" />
   </ItemGroup>
 
   <ItemGroup>
