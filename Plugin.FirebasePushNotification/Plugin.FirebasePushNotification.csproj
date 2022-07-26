@@ -12,13 +12,19 @@
     <Title>Firebase Push Notification Plugin for Xamarin iOS and Android</Title>
     <Summary>Receive and handle firebase push notifications across Xamarin.iOS and Xamarin.Android</Summary>
     <Description>Receive and handle firebase push notifications across Xamarin.iOS and Xamarin.Android.
-Fork of original library with removes "SendMessage" references and updated libraries.</Description>
+Fork of original library with removed "SendMessage" references and updated libraries.</Description>
 
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 
-    <Version>2.0.0</Version>
+    <Version>2.1.0</Version>
+
+    <PackageProjectUrl>https://github.com/JonasPetraska/FirebasePushNotificationPlugin</PackageProjectUrl>
+
+    <RepositoryUrl>https://github.com/JonasPetraska/FirebasePushNotificationPlugin</RepositoryUrl>
+
+    <PackageReleaseNotes>https://github.com/JonasPetraska/FirebasePushNotificationPlugin/releases</PackageReleaseNotes>
 
   </PropertyGroup>
 
