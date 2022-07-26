@@ -1,6 +1,6 @@
 ## Firebase Push Notification Plugin for Xamarin iOS and Android
 
-Simple cross platform plugin for handling firebase push notifications.
+Simple cross platform plugin for handling firebase push notifications. This plugin is a fork of the original https://github.com/CrossGeeks/FirebasePushNotificationPlugin. It has the "SendMessage" references removed and updated libraries.
 
 [![Build Status](https://dev.azure.com/CrossGeeks/Plugins/_apis/build/status/FirebasePushNotification%20Plugin%20CI%20Pipeline?branchName=master)](https://dev.azure.com/CrossGeeks/Plugins/_build/latest?definitionId=8&branchName=master)
 
